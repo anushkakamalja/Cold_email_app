@@ -1,35 +1,49 @@
-# 🧠 Resume Matcher App
+# 📧 Cold Email Generator
 
-This is a Python-based application that matches job descriptions with the most relevant version of Anushka Kamalja's resume. It automatically identifies matching technical skills from a job post, selects the most appropriate resume based on tech stack, and generates a personalized cold outreach email to recruiters.
+This app helps you generate personalized cold emails for job applications by scraping job postings, matching your resume skills, and composing a tailored email using LLMs.
 
----
+## Features
+- Scrapes job postings from a provided URL
+- Extracts job details using LLMs (Groq API)
+- Matches your resume skills to job requirements
+- Generates a personalized cold email for each job
+- Simple Streamlit web interface
 
-## 🔍 Features
+## Requirements
+- Python 3.8+
+- A valid Groq API key
 
-- Extracts key technical skills from job descriptions using an LLM
-- Matches those skills against a defined tech stack → resume mapping (`tech_stack_resume_mapping.csv`)
-- Retrieves and links the best-matching resume
-- Highlights matched skills in the cold email for personalization
-- Generates a concise, custom cold email with a professional signature
+## Installation
+1. **Clone the repository:**
+   ```sh
+   git clone <your-repo-url>
+   cd cold_email
+   ```
+2. **Install dependencies:**
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. **Set up environment variables:**
+   - Create a `.env` file in the project root:
+     ```
+     GROQ_API_KEY=your_groq_api_key_here
+     ```
 
----
+## Usage
+1. **Run the app:**
+   ```sh
+   streamlit run main.py
+   ```
+2. **Open your browser:**
+   - Go to the local URL provided by Streamlit (usually http://localhost:8501)
+3. **Enter a job posting URL** and click Submit to generate a cold email.
 
+## Notes
+- Your `.env` file should never be committed to version control (see `.gitignore`).
+- Make sure your Groq API key is valid and has access to the required models.
 
-## 💾 Setup Instructions
-
-1. Clone the repository
-   
-   git clone https://github.com/anushkakamalja/Cold_email_app.git
-   cd resume-matcher-app
-
-
-2. Install dependencies
-
-    pip install -r requirements.txt
-3. Run teh app:
-
-    streamlit run main.py
-
+## License
+MIT
 
 🛠️ Technologies Used
     - Python

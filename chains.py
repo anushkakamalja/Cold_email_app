@@ -19,7 +19,7 @@ class Chain:
         # max_tokens=8192,
         # timeout=10,
         # max_retries=3,
-        groq_api_key=os.getenv("GROQ_API_KEY"),
+        groq_api_key="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",
     )
     def extract_jobs(self,cleaned_text):
         prompt_extract = PromptTemplate.from_template(

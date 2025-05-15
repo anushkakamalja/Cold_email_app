@@ -7,9 +7,7 @@ from utils import clean_text
 from dotenv import load_dotenv
 load_dotenv()  
 
-# Set Streamlit-safe env vars early
-os.environ["USER_AGENT"] = os.getenv("USER_AGENT", "Mozilla/5.0")
-os.environ["TOKENIZERS_PARALLELISM"] = os.getenv("TOKENIZERS_PARALLELISM", "false")
+# Removed USER_AGENT and TOKENIZERS_PARALLELISM environment variable settings
 
 def create_streamlit_app(llm, resume, clean_text):
     st.title("📧 Cold Mail Generator")
