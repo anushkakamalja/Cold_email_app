@@ -16,7 +16,7 @@ This app helps you generate personalized cold emails for job applications by scr
 ## Installation
 1. **Clone the repository:**
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/anushkakamalja/Cold_email_app.git
    cd cold_email
    ```
 2. **Install dependencies:**
