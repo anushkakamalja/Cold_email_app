@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
-print("GROQ_API_KEY from .env:", repr(os.getenv("GROQ_API_KEY")))
+# print("GROQ_API_KEY from .env:", repr(os.getenv("GROQ_API_KEY")))
 
 class Chain:
     def __init__(self):
