@@ -8,18 +8,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-os.getenv("GROQ_API_KEY")
-
+import os
+print("GROQ_API_KEY from .env:", repr(os.getenv("GROQ_API_KEY")))
 
 class Chain:
     def __init__(self):
         self.llm = ChatGroq(
         model_name="llama-3.1-8b-instant",
         temperature=0,
-        # max_tokens=8192,
-        # timeout=10,
-        # max_retries=3,
-        groq_api_key="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",
+        groq_api_key=os.getenv("GROQ_API_KEY"),
     )
     def extract_jobs(self,cleaned_text):
         prompt_extract = PromptTemplate.from_template(

@@ -1,13 +1,10 @@
 import streamlit as st
 from langchain_community.document_loaders import WebBaseLoader
-import os
 from chains import Chain
 from resume import Resume
 from utils import clean_text
-from dotenv import load_dotenv
-load_dotenv()  
 
-# Removed USER_AGENT and TOKENIZERS_PARALLELISM environment variable settings
+
 
 def create_streamlit_app(llm, resume, clean_text):
     st.title("📧 Cold Mail Generator")
